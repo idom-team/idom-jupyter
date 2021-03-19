@@ -1,16 +1,15 @@
-var plugin = require('./index');
-var base = require('@jupyter-widgets/base');
+var plugin = require("./index");
+var base = require("@jupyter-widgets/base");
 
 module.exports = {
-  id: 'idom-client-jupyter',
+  id: "idom-client-jupyter",
   requires: [base.IJupyterWidgetRegistry],
-  activate: function(app, widgets) {
-      widgets.registerWidget({
-          name: 'idom-client-jupyter',
-          version: plugin.version,
-          exports: plugin
-      });
+  activate: function (app, widgets) {
+    widgets.registerWidget({
+      name: "idom-client-jupyter",
+      version: plugin.version,
+      exports: plugin,
+    });
   },
-  autoStart: true
+  autoStart: true,
 };
-

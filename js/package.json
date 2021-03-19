@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "clean": "rimraf dist/ && rimraf ../idom_jupyter/labextension/ && rimraf ../idom_jupyter/nbextension",
+    "format": "prettier --write ./lib",
     "prepublish": "yarn run clean && yarn run build:prod",
     "build": "webpack --mode=development && yarn run build:labextension:dev",
     "build:prod": "webpack --mode=production && yarn run build:labextension",
@@ -31,12 +32,12 @@
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.0.0",
-    "webpack": "^5",
-    "rimraf": "^2.6.1"
+    "prettier": "^2.2.1",
+    "rimraf": "^2.6.1",
+    "webpack": "^5"
   },
   "dependencies": {
     "@jupyter-widgets/base": "^1.1 || ^2 || ^3 || ^4",
-    "idom-client-react": "^0.7.0",
     "lodash": "^4.17.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
